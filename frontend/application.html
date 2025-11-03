@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Подання заяви — Радехівська школа мистецтв</title>
+   <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="temp_outline_fix.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <div class="logo-placeholder"></div>
+                <nav class="navigation">
+                    <a href="index.html" class="nav-link">Головна</a>
+                    <a href="departments.html" class="nav-link">Відділи</a>
+                    <a href="contacts.html" class="nav-link">Контакти</a>
+                    <a href="about.html" class="nav-link">Про нас</a>
+                    <a href="application.html" class="nav-link active">Подання заяви</a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-secondary" id="adminBtn" style="display: none;">
+                    Керування
+                </button>
+                <button class="btn btn-primary" id="authBtn">
+                    Якщо ви редактор
+                </button>
+            </div>
+        </header>
+
+        <section class="title-section">
+            <div class="school-title">
+                Радехівська школа мистецтв імені митрополита Андрея Шептицького
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Пошук..." class="search-input">
+                <span class="search-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <div class="content-section active" id="application">
+                <div class="content-left">
+                    <div class="content-label">Подання заяви:</div>
+                    <div class="content-area">
+                        <div class="faq-item">
+                            <h4>Необхідні документи</h4>
+                            <p>Заява, копія свідоцтва про народження, медична довідка.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Терміни подачі</h4>
+                            <p>З 1 травня по 31 серпня щороку.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Вступні випробування</h4>
+                            <p>Прослуховування або перегляд робіт залежно від відділу.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div class="post-container">
+                        <div class="post-header-with-label">
+                            <div class="post-header">
+                                <div class="post-avatar"></div>
+                                <div class="post-info">
+                                    <h3 class="post-title">Як подати заяву на вступ</h3>
+                                    <div class="post-meta">
+                                        <span class="post-author">Радехівська школа мистецтв</span>
+                                        <span class="post-date">2024-2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Для вступу до нашої школи необхідно подати заяву та пройти вступні випробування. Ми приймаємо дітей віком від 6 до 16 років.</p>
+                            <p>Зверніться до нас за додатковою інформацією про умови вступу та програми навчання.</p>
+                        </div>
+                        <div class="application-form-container">
+                            <div class="form-header">
+                                <h3>Заповніть форму для подачі заяви</h3>
+                            </div>
+                            <form action="#" class="application-form">
+                                <div class="form-group">
+                                    <label for="name">Ім'я</label>
+                                    <input type="text" id="name" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="surname">Прізвище</label>
+                                    <input type="text" id="surname" name="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateOfBirth">Дата народження</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Повідомлення</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Подати заяву</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+<div class="modal-overlay" id="authModal">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>Авторизація редактора</h2>
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <form class="auth-form" id="authForm">
+            <div class="form-group-auth">
+                <label for="authEmail">Email</label>
+                <input type="email" id="authEmail" name="email" required>
+            </div>
+            <div class="form-group-auth">
+                <label for="authPassword">Пароль</label>
+                <input type="password" id="authPassword" name="password" required>
+            </div>
+            <div class="form-group-auth checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="rememberMe" name="remember">
+                    <span class="checkmark"></span>
+                    Запам'ятати мене
+                </label>
+            </div>
+            <button type="submit" class="auth-submit-btn">Увійти</button>
+            <div class="auth-footer">
+                <a href="#" class="forgot-password">Забули пароль?</a>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="auth.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+
+

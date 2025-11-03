@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# Django
+*.log
+local_settings.py
+backend/db.sqlite3
+backend/db.sqlite3-journal
+backend/staticfiles/
+
+# Uploaded media (keep folders but ignore files)
+backend/media/**
+!backend/media/
+!backend/media/.gitkeep
+!backend/media/posts/
+!backend/media/posts/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+

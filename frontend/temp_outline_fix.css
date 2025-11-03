@@ -1,0 +1,30 @@
+/* Глобальне прибирання outline для всіх елементів */
+*:focus {
+    outline: none !important;
+}
+
+/* Прибирання outline для кнопок */
+button:focus,
+.btn:focus,
+.btn-primary:focus,
+.submit-btn:focus,
+.auth-submit-btn:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.3);
+}
+
+/* Прибирання outline для посилань */
+a:focus,
+.nav-link:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Прибирання outline для інпутів */
+input:focus,
+textarea:focus,
+.search-input:focus {
+    outline: none !important;
+}
