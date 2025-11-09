@@ -309,6 +309,15 @@ label {
     margin-top: -35px;
 }
 
+.prev-highlight-btn,
+.next-highlight-btn {
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    padding: 8px 12px;
+    margin: 0 5px;
+}
+
 /* ВАЖЛИВО: Використовуємо більш специфічний селектор */
 .search-container .search-input {
     width: 100%;
@@ -401,6 +410,14 @@ label {
     border: 2px solid #64b5f6;
     min-height: 400px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.zayava {
+    margin-left: 10px;
+}
+
+.prev-highlight-btn.visible,
+.next-highlight-btn.visible {
     opacity: 1;
     transform: translateY(0);
     position: sticky;
@@ -611,6 +628,7 @@ label {
     line-height: 1.6;
     margin-bottom: 15px;
     font-size: 14px;
+    line-height: 30px;
 }
 
 .post-content ul li {
@@ -812,6 +830,13 @@ label {
     padding: 2px 0;
     border-radius: 2px;
     transition: background-color 0.3s ease;
+}
+
+.search-hint {
+    font-style: italic;
+    font-size: 12px;
+    margin-top: -13px;
+    opacity: 0.8;
 }
 
 .search-highlight-active {

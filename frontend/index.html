@@ -2,7 +2,7 @@
 <html lang="uk">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
         <title>Радехівська школа мистецтв імені митрополита Андрея Шептицького</title>
    <link rel="stylesheet" href="auth.css">
     <link rel="stylesheet" href="styles.css">
@@ -19,7 +19,6 @@
                     <a href="departments.html" class="nav-link">Відділи</a>
                     <a href="contacts.html" class="nav-link">Контакти</a>
                     <a href="about.html" class="nav-link">Про нас</a>
-                    <a href="application.html" class="nav-link">Подання заяви</a>
                 </nav>
             </div>
             <div class="header-right">
@@ -39,6 +38,7 @@
             </div>
             <div class="search-container">
                 <input type="text" placeholder="Пошук..." class="search-input">
+                <div class="search-hint">Shift - наступний елемент, Shift+Enter - попередній</div>
                 <span class="search-icon">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
@@ -114,8 +114,7 @@
             <div class="form-group-auth checkbox-group">
                 <label class="checkbox-label">
                     <input type="checkbox" id="rememberMe" name="remember">
-                    <span class="checkmark"></span>
-                    Запам'ятати мене
+                    <span class="checkmark">Запам'ятати мене</span>
                 </label>
             </div>
             <button type="submit" class="auth-submit-btn">Увійти</button>
